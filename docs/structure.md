@@ -17,7 +17,7 @@
    - Живой адрес: https://halimaaltyn2026.github.io/my-projects/webinar.html
 2. **Страница портфолио**
    - Описание: Создание адаптивной страницы с использованием HTML и CSS.
-   - Живой адрес: https://github.io
+   - Живой адрес: https://halimaaltyn2026.github.io/my-projects/
 3. **Профиль разработчика**
-   - Описание: Личная страница-визитка с навыками и контактными данными.
-   - Живой адрес: https://halimaaltyn2026.github.io
+   - Описание: Личная страница-визитка веб-разработчика. Для связи с заказчиками добавлен Telegram: @A_l_t_y_n
+   - Живой адрес: https://halimaaltyn2026.github.io/my-projects/profile.html
