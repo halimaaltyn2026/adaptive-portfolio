@@ -1,0 +1,22 @@
+/* --- Стили для кликабельности карточек --- */
+
+/* Делаем карточку главным ориентиром для абсолютной ссылки */
+article {
+    position: relative; 
+}
+
+/* Растягиваем невидимый слой ссылки на всю карточку */
+article .main-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+/* Решение для мобильных телефонов (чтобы клик проходил сквозь текст) */
+article h3, article p {
+    pointer-events: none; 
+}
