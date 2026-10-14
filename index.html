@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Портфолио Халимы Алтын -верстка современных и адаптивных сайтов на заказ. Связь в Telegram: @A_l_t_y_n">
+    <meta name="description" content="Портфолио Халимы Алтын - верстка современных и адаптивных сайтов на заказ. Связь в Telegram: @A_l_t_y_n">
     <title>Портфолио | Халима Алтын</title>
+    
+    <!-- Добавляем стили для магии кликабельности -->
+    <style>
+        /* Стиль для каждой карточки */
+        article {
+            position: relative; /* Делаем карточку главным ориентиром для абсолютной ссылки */
+            border: 1px solid #ccc; /* Легкая рамка (можете удалить или заменить на свои стили) */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Визуальный эффект при наведении на ЛЮБОЕ место карточки */
+        article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* А вот и сама CSS-магия */
+        article .main-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer; /* Превращает курсор в руку на всей площади карточки */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,22 +46,25 @@
         <section>
             <h2>Мои работы (Портфолио)</h2>
             
+            <!-- Карточка 1 -->
             <article>
                 <h3>Форма регистрации на вебинар</h3>
                 <p>Работа с формами и базовой разметкой.</p>
-                <a href="https://halimaaltyn2026.github.io/my-projects/webinar.html" target="_blank">Посмотреть проект</a>
+                <a href="https://halimaaltyn2026.github.io/my-projects/webinar.html" target="_blank" class="main-link">Открыть форму вебинара</a>
             </article>
 
+            <!-- Карточка 2 -->
             <article>
                 <h3>Страница портфолио</h3>
                 <p>Создание адаптивной страницы с использованием HTML и CSS.</p>
-                <a href="https://halimaaltyn2026.github.io/my-projects/" target="_blank">Посмотреть проект</a>
+                <a href="https://halimaaltyn2026.github.io/my-projects/" target="_blank" class="main-link">Посмотреть страницу портфолио</a>
             </article>
 
+            <!-- Карточка 3 -->
             <article>
                 <h3>Профиль разработчика</h3>
                 <p>Личная страница-визитка с навыками и контактными данными.</p>
-                <a href="https://halimaaltyn2026.github.io/my-projects/profile.html" target="_blank">Посмотреть проект</a>
+                <a href="https://halimaaltyn2026.github.io/my-projects/profile.html" target="_blank" class="main-link">Открыть профиль разработчика</a>
             </article>
         </section>
     </main>
