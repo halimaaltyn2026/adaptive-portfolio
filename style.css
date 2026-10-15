@@ -1,12 +1,8 @@
-
-/* -- Стили для кликабельности карточек -- */
-
-/* Делаю карточку главным ориентиром для абсолютной ссылки */
+/* -- Стили для кликабельности карточек (Ваш базовый код) -- */
 article {
     position: relative; 
 }
 
-/* Растягиваю невидимый слой ссылки на всю карточку */
 article .main-link::after {
     content: "";
     position: absolute;
@@ -17,14 +13,11 @@ article .main-link::after {
     cursor: pointer;
 }
 
-/* Решение для мобильных телефонов (чтобы клик проходил сквозь текст) */
 article h3, article p {
     pointer-events: none; 
 }
 
-
-
-/* Базовые настройки для всего сайта */
+/* -- Новые стили для адаптива и сетки -- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,7 +32,6 @@ body {
     padding: 20px;
 }
 
-/* Ограничение ширины контента по заданию */
 header, main, footer {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,7 +69,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Сетка для карточек проектов */
 .projects-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -85,7 +76,6 @@ a:hover {
     margin-top: 25px;
 }
 
-/* Стилизация внешнего вида карточек */
 .projects-container article {
     background-color: #f9f9f9;
     border: 1px solid #e1e1e1;
@@ -108,7 +98,6 @@ a:hover {
     color: #111111;
 }
 
-/* Оформление ссылок-кнопок */
 .main-link {
     display: inline-block;
     align-self: flex-start;
@@ -134,23 +123,19 @@ footer {
     color: #666666;
 }
 
-/* Адаптив под планшеты */
 @media (min-width: 600px) {
     h1 {
         font-size: 2.2rem;
     }
-    
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Адаптив под мониторы */
 @media (min-width: 950px) {
     h1 {
         font-size: 2.5rem;
     }
-    
     .projects-container {
         grid-template-columns: repeat(3, 1fr);
     }
