@@ -1,5 +1,5 @@
 /* -- Стили для кликабельности карточек -- */
-article {
+.card {
     position: relative; 
 }
 
