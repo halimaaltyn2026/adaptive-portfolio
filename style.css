@@ -140,3 +140,42 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Мобильное меню по умолчанию скрыто */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #1a2430; /* Темный фон */
+    color: white;
+    z-index: 1000;
+    padding: 40px 20px;
+}
+
+/* Класс, который JavaScript добавляет при клике для показа меню */
+.mobile-nav.is-open {
+    display: block;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0; margin-top: 40px;
+}
+
+.menu-list li {
+    margin-bottom: 20px;
+}
+
+.menu-list a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Стили для обводки фокуса */
+button:focus-visible, 
+a:focus-visible {
+    outline: 4px solid #00bcff; /* Красивая голубая рамка */
+    outline-offset: 4px;
+}
