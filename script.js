@@ -14,15 +14,21 @@ function openMenu() {
     closeBtn.focus(); 
 }
 
-function closeMenu() {
-    mobileMenu.classList.remove('is-open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    menuBtn.focus(); 
+    function closeMenu(returnFocus = true) {
+  mobileMenu.classList.remove('is-open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  if (returnFocus) menuBtn.focus();
+
 }
 
 menuBtn.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
+closeBtn.addEventListener('click', () => closeMenu());
+document.querySelectorAll('.menu-link').forEach(function (link) {
+  link.addEventListener('click', function () {
+    closeMenu(false);
+  });
+});
 
 // Отслеживаем нажатия клавиш
 document.addEventListener('keydown', function(event) {
